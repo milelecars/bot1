@@ -94,20 +94,8 @@
             </div>
           </div>
 
-          <div class="strategy-list">
-            <div class="strategy-box s2-box">
-              <div class="strategy-topline">
-                <div class="strategy-name s2">S2 — FVG RETEST</div>
-                <span class="mini-chip">FVG retest + EMA50/100 + ADX</span>
-              </div>
-              <div class="strategy-stats">
-                <div><span>Trades</span><strong id="s2Trades">0</strong></div>
-                <div><span>Win Rate</span><strong id="s2WinRate">0%</strong></div>
-                <div><span>P&amp;L</span><strong id="s2Pnl">0.00</strong></div>
-                <div><span>Consec. Losses</span><strong id="s2Losses">0</strong></div>
-              </div>
-            </div>
-          </div>
+          <!-- Cards are rendered by app.js, one per ENABLED strategy (from /health). -->
+          <div class="strategy-list empty" id="strategyList">Loading strategies…</div>
         </div>
 
         <div class="card glass api-status card-glow">
@@ -170,8 +158,8 @@
             <option value="SHORT">Short</option>
           </select>
           <select id="strategyFilter" aria-label="Filter by strategy">
+            <!-- Options populated by app.js from the enabled strategies. -->
             <option value="ALL">All strategies</option>
-            <option value="S2_FVG_RETEST">S2</option>
           </select>
         </div>
 
